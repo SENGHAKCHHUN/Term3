@@ -1,6 +1,5 @@
 class Point {
   constructor(public x: number, public y: number) {}
-
   /**
    * @param other the other point
    * @returns true if the given point is equal to current point
@@ -11,6 +10,7 @@ class Point {
   
   translate(x: number, y:number) : Point {
 		// TODO create a new Point translated of (x, y)
+    return new Point(x , y)
   }
 }
 
@@ -29,8 +29,9 @@ class Line {
     );
   }
  
-  translate(x: number, y:number) : Line {
+  translate(x: arry, y: any): Line {
 		// TODO create a new line translated of (x, y)
+    return new Line(x , y, this.color);
   }
    
 }
@@ -58,6 +59,7 @@ let p1 = new Point(10, 15);
 let p2 = new Point(50, 15);
 let p3 = new Point(10, 15);
 let p4 = new Point(50, 15);
+
 let l1 = new Line(p1, p2, "red");
 let l2 = new Line(p3, p4, "red");
 
